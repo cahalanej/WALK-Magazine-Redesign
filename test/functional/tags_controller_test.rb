@@ -18,30 +18,30 @@ class TagsControllerTest < ActionController::TestCase
 
   test "should create tag" do
     assert_difference('Tag.count') do
-      post :create, :tag => @tag.attributes
+      post :create, tag: @tag.attributes
     end
 
     assert_redirected_to tag_path(assigns(:tag))
   end
 
   test "should show tag" do
-    get :show, :id => @tag
+    get :show, id: @tag
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => @tag
+    get :edit, id: @tag
     assert_response :success
   end
 
   test "should update tag" do
-    put :update, :id => @tag, :tag => @tag.attributes
+    put :update, id: @tag, tag: @tag.attributes
     assert_redirected_to tag_path(assigns(:tag))
   end
 
   test "should destroy tag" do
     assert_difference('Tag.count', -1) do
-      delete :destroy, :id => @tag
+      delete :destroy, id: @tag
     end
 
     assert_redirected_to tags_path

@@ -2,7 +2,8 @@
 
 <table>
   <tr>
-    <th>Title</th>
+    <th>Name</th>
+    <th>Post</th>
     <th></th>
     <th></th>
     <th></th>
@@ -10,10 +11,11 @@
 
 <% @tags.each do |tag| %>
   <tr>
-    <td><%= tag.title %></td>
+    <td><%= tag.name %></td>
+    <td><%= tag.post %></td>
     <td><%= link_to 'Show', tag %></td>
     <td><%= link_to 'Edit', edit_tag_path(tag) %></td>
-    <td><%= link_to 'Destroy', tag, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', tag, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
